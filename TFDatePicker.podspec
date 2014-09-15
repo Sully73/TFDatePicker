@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TFDatePicker"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Enhanced Textual NSDatePicker."
 
   s.description  = <<-DESC
