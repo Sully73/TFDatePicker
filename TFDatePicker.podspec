@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.author             = "Tom Fewster"
   s.osx.deployment_target = "10.7"
   s.source       = { :git => "https://github.com/Sully73/TFDatePicker.git", :tag => "0.0.1" }
-  s.source_files  = 'TFDatePicker/TFDatePicker/**/*.{h,m}'
-  s.resource_bundles  = { 'TFDatePicker' => [ 'TFDatePicker/TFDatePicker/*.{png,xib}'] }
+  s.source_files  = 'TFDatePicker/TFDatePicker/**/*.{h,m,xib}'
+  s.resource_bundles  = { 'TFDatePicker' => [ 'TFDatePicker/TFDatePicker/*.png'] }
   s.requires_arc = true
 end
