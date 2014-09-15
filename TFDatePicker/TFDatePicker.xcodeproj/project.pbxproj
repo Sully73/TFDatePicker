@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B07693619C757D2002B5C3B /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B07693519C757D2002B5C3B /* Arrow.png */; };
+		8B07693819C757DA002B5C3B /* Arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B07693719C757DA002B5C3B /* Arrow@2x.png */; };
 		AB346E22192F5F51006E2AD6 /* prompt.png in Resources */ = {isa = PBXBuildFile; fileRef = AB346E21192F5F51006E2AD6 /* prompt.png */; };
 		AB81C3AE1923961D00CA7A3B /* TFDatePickerCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AB81C3AC1923961D00CA7A3B /* TFDatePickerCell.h */; };
 		AB81C3AF1923961D00CA7A3B /* TFDatePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB81C3AD1923961D00CA7A3B /* TFDatePickerCell.m */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B07693519C757D2002B5C3B /* Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow.png; sourceTree = "<group>"; };
+		8B07693719C757DA002B5C3B /* Arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow@2x.png"; sourceTree = "<group>"; };
 		AB346E21192F5F51006E2AD6 /* prompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prompt.png; sourceTree = "<group>"; };
 		AB81C3AC1923961D00CA7A3B /* TFDatePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFDatePickerCell.h; sourceTree = "<group>"; };
 		AB81C3AD1923961D00CA7A3B /* TFDatePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFDatePickerCell.m; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				E2D656F1160A18F100DEC117 /* TFDatePicker-Info.plist */,
 				E2D656F2160A18F100DEC117 /* InfoPlist.strings */,
 				E2D656F5160A18F100DEC117 /* TFDatePicker-Prefix.pch */,
+				8B07693519C757D2002B5C3B /* Arrow.png */,
+				8B07693719C757DA002B5C3B /* Arrow@2x.png */,
 				E2D656FE160A18FE00DEC117 /* calendar.png */,
 				E2D656FF160A18FE00DEC117 /* calendar@2x.png */,
 			);
@@ -186,9 +192,11 @@
 			files = (
 				E2D656F4160A18F100DEC117 /* InfoPlist.strings in Resources */,
 				E2D65700160A18FE00DEC117 /* calendar.png in Resources */,
+				8B07693819C757DA002B5C3B /* Arrow@2x.png in Resources */,
 				AB346E22192F5F51006E2AD6 /* prompt.png in Resources */,
 				E2D65701160A18FE00DEC117 /* calendar@2x.png in Resources */,
 				AB81C3B11923AF4600CA7A3B /* TFDatePicker.xib in Resources */,
+				8B07693619C757D2002B5C3B /* Arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

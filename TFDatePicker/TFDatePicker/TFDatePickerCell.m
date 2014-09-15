@@ -24,13 +24,16 @@
 
 - (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
 {
-    // this draws all
-    [super drawWithFrame:cellFrame inView:controlView];
+    controlView.layer.cornerRadius = cellFrame.size.height / 2;
+    controlView.layer.borderWidth = 1.0f;
+    controlView.layer.backgroundColor = [NSColor whiteColor].CGColor;
+    controlView.layer.borderColor = [NSColor colorWithCalibratedRed:0.000f green:0.000f blue:0.000f alpha:0.15f].CGColor;
+    controlView.layer.masksToBounds = NO;
+    [super drawInteriorWithFrame:cellFrame inView:controlView];
 }
 
 - (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
 {
-    // this is never called
     [super drawInteriorWithFrame:cellFrame inView:controlView];
 }
 

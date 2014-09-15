@@ -10,6 +10,8 @@
 #import "TFDatePickerCell.h"
 #import "TFDatePickerPopoverController.h"
 
+#define kMyTextColor [NSColor colorWithCalibratedRed:0.561f green:0.573f blue:0.616f alpha:1.00f]
+
 static char TFValueBindingContext;
 
 @interface TFDatePicker ()
@@ -115,8 +117,14 @@ static NSDate * m_referenceDate;
 #pragma mark -
 #pragma mark Nib loading
  
-- (void)awakeFromNib
-{
+- (void)awakeFromNib{
+
+    //Configure text
+    self.alignment = NSCenterTextAlignment;
+    self.bordered = NO;
+    self.font = [NSFont fontWithName:@"HelveticaNeue" size:14.0f];
+    self.textColor = kMyTextColor;
+    
     // access framework bundle
 	NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
     self.promptImage = [frameworkBundle imageForResource:@"prompt"];
@@ -129,7 +137,7 @@ static NSDate * m_referenceDate;
 	showPopoverButton.imagePosition = NSImageOnly;
     showPopoverButton.toolTip = NSLocalizedString(@"Show date picker panel", "Datepicker button tool tip");
     
-	showPopoverButton.image = [frameworkBundle imageForResource:@"calendar"];
+	showPopoverButton.image = [frameworkBundle imageForResource:@"Arrow"];
 	[showPopoverButton.cell setHighlightsBy:NSContentsCellMask];
 
 	[showPopoverButton setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -145,7 +153,7 @@ static NSDate * m_referenceDate;
 	NSDictionary *views = NSDictionaryOfVariableBindings(showPopoverButton);
     if ([self.cell datePickerStyle] == NSTextFieldAndStepperDatePickerStyle) {
         self.imageOffsetX = 5 + 16 + 20;
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[showPopoverButton(16)]-(20)-|" options:0 metrics:nil views:views]];
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[showPopoverButton(16)]-(5)-|" options:0 metrics:nil views:views]];
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(3)-[showPopoverButton(16)]" options:0 metrics:nil views:views]];
         
     } else {
@@ -334,7 +342,7 @@ static NSDate * m_referenceDate;
     if (self.empty && self.prevTextColor) {
         self.prevTextColor = color;
     } else {
-        [super setTextColor:color];
+        [super setTextColor:kMyTextColor];
     }
 }
 
