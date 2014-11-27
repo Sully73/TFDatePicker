@@ -203,7 +203,6 @@ static NSDate * m_referenceDate;
     }
     
     if (drawImage) {
-        [image setFlipped:NO];
         
         CGFloat imageHeight = image.size.height;
         CGFloat imageWidth = image.size.width;
