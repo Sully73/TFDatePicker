@@ -24,17 +24,19 @@
 
 - (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
 {
-    controlView.layer.cornerRadius = cellFrame.size.height / 2;
-    controlView.layer.borderWidth = 1.0f;
-    controlView.layer.backgroundColor = [NSColor whiteColor].CGColor;
-    controlView.layer.borderColor = [NSColor colorWithCalibratedRed:0.000f green:0.000f blue:0.000f alpha:0.15f].CGColor;
-    controlView.layer.masksToBounds = NO;
-    [super drawInteriorWithFrame:cellFrame inView:controlView];
+   
+    NSRect myRect = NSMakeRect(NSMinX(cellFrame) + 0.5, NSMinY(cellFrame) + 0.5, NSWidth(cellFrame) -20.0, NSHeight(cellFrame) - 1.0);
+    // Rectangle Drawing
+    CGFloat radius = (NSHeight(myRect) - 1.0) / 2;
+    NSBezierPath* rectanglePath = [NSBezierPath bezierPathWithRoundedRect:myRect xRadius:radius yRadius:radius];
+    [NSColor.whiteColor setFill];
+    [rectanglePath fill];
+    [[NSColor colorWithCalibratedRed:0.000f green:0.000f blue:0.000f alpha:0.15f] setStroke];
+    [rectanglePath setLineWidth: 1];
+    [rectanglePath stroke];
+    
+    [super drawWithFrame:cellFrame inView:controlView];
 }
 
-- (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
-{
-    [super drawInteriorWithFrame:cellFrame inView:controlView];
-}
 
 @end

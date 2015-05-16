@@ -124,6 +124,7 @@ static NSDate * m_referenceDate;
     self.bordered = NO;
     self.font = [NSFont fontWithName:@"HelveticaNeue" size:14.0f];
     self.textColor = kMyTextColor;
+    self.drawsBackground = NO;
     
     // access framework bundle
 	NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
@@ -153,7 +154,7 @@ static NSDate * m_referenceDate;
 	NSDictionary *views = NSDictionaryOfVariableBindings(showPopoverButton);
     if ([self.cell datePickerStyle] == NSTextFieldAndStepperDatePickerStyle) {
         self.imageOffsetX = 5 + 16 + 20;
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[showPopoverButton(16)]-(5)-|" options:0 metrics:nil views:views]];
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[showPopoverButton(16)]-(20)-|" options:0 metrics:nil views:views]];
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(3)-[showPopoverButton(16)]" options:0 metrics:nil views:views]];
         
     } else {
